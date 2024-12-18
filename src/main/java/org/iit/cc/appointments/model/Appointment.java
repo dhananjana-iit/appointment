@@ -14,7 +14,7 @@ public class Appointment {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String status; // Scheduled, Rescheduled, Canceled, Completed
-    private String notes;
+    private String symptomCondition;
     private int doctorId;
     private boolean doctorAvailable;
 
@@ -59,12 +59,12 @@ public class Appointment {
         this.status = status;
     }
 
-    public String getNotes() {
-        return notes;
+    public String getSymptomCondition() {
+        return symptomCondition;
     }
 
-    public void setNotes(String notes) {
-        this.notes = notes;
+    public void setSymptomCondition(String symptomCondition) {
+        this.symptomCondition = symptomCondition;
     }
 
     public boolean isDoctorAvailable() {return doctorAvailable;}

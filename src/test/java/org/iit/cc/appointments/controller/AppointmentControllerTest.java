@@ -48,7 +48,7 @@ public class AppointmentControllerTest {
         appointment.setPatientId("12345");
         appointment.setStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
         appointment.setEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
-        appointment.setNotes("Regular Checkup");
+        appointment.setSymptomCondition("Regular Checkup");
         appointment.setStatus("Scheduled");
 
         Mockito.when(service.scheduleAppointment(any(Appointment.class))).thenReturn(appointment);
@@ -70,7 +70,7 @@ public class AppointmentControllerTest {
         appointment.setPatientId("12345");
         appointment.setStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
         appointment.setEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
-        appointment.setNotes("Regular Checkup");
+        appointment.setSymptomCondition("Regular Checkup");
         appointment.setStatus("Scheduled");
 
         Mockito.when(service.getAppointmentById("1")).thenReturn(Optional.of(appointment));
@@ -89,7 +89,7 @@ public class AppointmentControllerTest {
         appointment.setPatientId("12345");
         appointment.setStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
         appointment.setEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
-        appointment.setNotes("Regular Checkup");
+        appointment.setSymptomCondition("Regular Checkup");
         appointment.setStatus("Scheduled");
 
         Mockito.when(service.getAppointmentsForPatient(eq("12345"), any(LocalDateTime.class), any(LocalDateTime.class)))
@@ -112,7 +112,7 @@ public class AppointmentControllerTest {
         updatedAppointment.setPatientId("12345");
         updatedAppointment.setStartTime(LocalDateTime.of(2024, 12, 21, 11, 0));
         updatedAppointment.setEndTime(LocalDateTime.of(2024, 12, 21, 11, 30));
-        updatedAppointment.setNotes("Updated Checkup");
+        updatedAppointment.setSymptomCondition("Updated Checkup");
         updatedAppointment.setStatus("Rescheduled");
 
         Mockito.when(service.updateAppointment(eq("1"), any(Appointment.class))).thenReturn(updatedAppointment);

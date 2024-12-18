@@ -67,7 +67,7 @@ public class AppointmentService {
         Appointment appointment = existingAppointment.get();
         appointment.setStartTime(updatedAppointment.getStartTime());
         appointment.setEndTime(updatedAppointment.getEndTime());
-        appointment.setNotes(updatedAppointment.getNotes());
+        appointment.setSymptomCondition(updatedAppointment.getSymptomCondition());
         appointment.setStatus(updatedAppointment.getStatus());
         appointment.setDoctorId(updatedAppointment.getDoctorId());
         appointment.setDoctorAvailable(updatedAppointment.isDoctorAvailable());
