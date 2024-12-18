@@ -15,7 +15,7 @@ public class Appointment {
     private LocalDateTime endTime;
     private String status; // Scheduled, Rescheduled, Canceled, Completed
     private String symptomCondition;
-    private int doctorId;
+    private String doctorId;
     private boolean doctorAvailable;
 
     // Getters and Setters
@@ -71,8 +71,8 @@ public class Appointment {
 
     public void setDoctorAvailable(boolean doctorAvailable) {this.doctorAvailable = doctorAvailable;}
 
-    public int getDoctorId() {return doctorId;}
+    public String getDoctorId() {return doctorId;}
 
-    public void setDoctorId(int doctorId) {this.doctorId = doctorId;}
+    public void setDoctorId(String doctorId) {this.doctorId = doctorId;}
 }
 
