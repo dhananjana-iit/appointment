@@ -46,8 +46,8 @@ public class AppointmentControllerTest {
         Appointment appointment = new Appointment();
         appointment.setId("1");
         appointment.setPatientId("12345");
-        appointment.setStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
-        appointment.setEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
+        appointment.setPlannedStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
+        appointment.setPlannedEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
         appointment.setSymptomCondition("Regular Checkup");
         appointment.setStatus("Scheduled");
 
@@ -68,8 +68,8 @@ public class AppointmentControllerTest {
         Appointment appointment = new Appointment();
         appointment.setId("1");
         appointment.setPatientId("12345");
-        appointment.setStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
-        appointment.setEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
+        appointment.setPlannedStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
+        appointment.setPlannedEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
         appointment.setSymptomCondition("Regular Checkup");
         appointment.setStatus("Scheduled");
 
@@ -87,8 +87,8 @@ public class AppointmentControllerTest {
         Appointment appointment = new Appointment();
         appointment.setId("1");
         appointment.setPatientId("12345");
-        appointment.setStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
-        appointment.setEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
+        appointment.setPlannedStartTime(LocalDateTime.of(2024, 12, 20, 10, 0));
+        appointment.setPlannedEndTime(LocalDateTime.of(2024, 12, 20, 10, 30));
         appointment.setSymptomCondition("Regular Checkup");
         appointment.setStatus("Scheduled");
 
@@ -110,8 +110,8 @@ public class AppointmentControllerTest {
         Appointment updatedAppointment = new Appointment();
         updatedAppointment.setId("1");
         updatedAppointment.setPatientId("12345");
-        updatedAppointment.setStartTime(LocalDateTime.of(2024, 12, 21, 11, 0));
-        updatedAppointment.setEndTime(LocalDateTime.of(2024, 12, 21, 11, 30));
+        updatedAppointment.setPlannedStartTime(LocalDateTime.of(2024, 12, 21, 11, 0));
+        updatedAppointment.setPlannedEndTime(LocalDateTime.of(2024, 12, 21, 11, 30));
         updatedAppointment.setSymptomCondition("Updated Checkup");
         updatedAppointment.setStatus("Rescheduled");
 
