@@ -23,7 +23,7 @@ public class AppointmentService {
      * @return Scheduled appointment
      */
     public Appointment scheduleAppointment(Appointment appointment) {
-        if (isAppointmentConflict(appointment.getPatientId(), appointment.getPlannedStartTime(), appointment.getPlannedEndTime())) {
+        if (isAppointmentConflict(appointment.getPatientId(), appointment.getStartTime(), appointment.getEndTime())) {
             throw new IllegalStateException("The appointment conflicts with an existing one.");
         }
         return repository.save(appointment);
@@ -65,8 +65,8 @@ public class AppointmentService {
         }
 
         Appointment appointment = existingAppointment.get();
-        appointment.setPlannedStartTime(updatedAppointment.getPlannedStartTime());
-        appointment.setPlannedEndTime(updatedAppointment.getPlannedEndTime());
+        appointment.setStartTime(updatedAppointment.getStartTime());
+        appointment.setEndTime(updatedAppointment.getEndTime());
         appointment.setSymptomCondition(updatedAppointment.getSymptomCondition());
         appointment.setStatus(updatedAppointment.getStatus());
         appointment.setDoctorId(updatedAppointment.getDoctorId());
@@ -77,7 +77,7 @@ public class AppointmentService {
             throw new IllegalStateException("The doctor is not available at the requested time.");
         }
 
-        if (isAppointmentConflict(appointment.getPatientId(), appointment.getPlannedStartTime(), appointment.getPlannedEndTime())) {
+        if (isAppointmentConflict(appointment.getPatientId(), appointment.getStartTime(), appointment.getEndTime())) {
             throw new IllegalStateException("The updated appointment conflicts with an existing one.");
         }
 

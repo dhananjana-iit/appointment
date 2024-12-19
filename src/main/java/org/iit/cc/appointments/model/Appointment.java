@@ -11,8 +11,8 @@ public class Appointment {
     @Id
     private String id;
     private String patientId;
-    private LocalDateTime plannedStartTime;
-    private LocalDateTime plannedEndTime;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
     private boolean overTime;
     private String status; // Scheduled, Rescheduled, Canceled, Completed
     private String symptomCondition;
@@ -36,20 +36,20 @@ public class Appointment {
         this.patientId = patientId;
     }
 
-    public LocalDateTime getPlannedStartTime() {
-        return plannedStartTime;
+    public LocalDateTime getStartTime() {
+        return startTime;
     }
 
-    public void setPlannedStartTime(LocalDateTime plannedStartTime) {
-        this.plannedStartTime = plannedStartTime;
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
     }
 
-    public LocalDateTime getPlannedEndTime() {
-        return plannedEndTime;
+    public LocalDateTime getEndTime() {
+        return endTime;
     }
 
-    public void setPlannedEndTime(LocalDateTime plannedEndTime) {
-        this.plannedEndTime = plannedEndTime;
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
     }
 
     public String getStatus() {
